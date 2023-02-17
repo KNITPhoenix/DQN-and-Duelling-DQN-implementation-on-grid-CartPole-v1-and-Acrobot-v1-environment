@@ -9,3 +9,11 @@
 
 ![alt text](https://github.com/KNITPhoenix/DQN-and-Duelling-DQN-implementation-on-grid-CartPole-v1-and-Lunar-Lander-environment/blob/main/acrobot.PNG)
 
+## Algorithms
+- DQN : Deep Q-Network, approximates a state-value function in a Q-Learning framework with a neural network. In the Atari Games case, they take in several frames of the game as an input and output state values for each action as an output.
+- Duelling DQN : A Dueling Network is a type of Q-Network that has two streams to separately estimate (scalar) state-value and the advantages for each action. Both streams share a common convolutional feature learning module. The two streams are combined via a special aggregating layer to produce an estimate of the state-action value function Q .
+
+## Results
+- Grid: The reward per episode is calculated as the mean of all the rewards per episode. The network was trained for 1000 episodes with a discount factor of 0.93 (DQN) and 0.99 (Duelling DQN). It resulted in a reward of 240 (during testing).
+- CartPole: The reward per episode is calculated as the mean of all the rewards per episode. We ran the network for 1000 episodes with a discount factor of 1. It resulted in a reward of 500 during testing.
+- Acrobot: We ran the network for 1000 episodes with a discount factor of 0.93 (both) and got a reward of -100 during testing.
